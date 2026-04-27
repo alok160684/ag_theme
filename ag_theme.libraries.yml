@@ -2,7 +2,19 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      css/layout.css: {}
+      css/components.css: {}
   js:
     js/script.js: {}
   dependencies:
-    - core/jquery
+    - core/drupal
+
+components:
+  css:
+    component:
+      components/header/header.css: {}
+      components/footer/footer.css: {}
+      components/hero/hero.css: {}
+      components/card/card.css: {}
+      components/grid/grid.css: {}
+      components/section/section.css: {}

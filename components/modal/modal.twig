@@ -1,0 +1,12 @@
+{# Modal component #}
+<div class="ag-modal" id="modal">
+  <div class="ag-modal__overlay"></div>
+  <div class="ag-modal__content">
+    {% if title %}
+      <h2 class="ag-modal__title">{{ title }}</h2>
+    {% endif %}
+    {% if body %}
+      <div class="ag-modal__body">{{ body }}</div>
+    {% endif %}
+  </div>
+</div>

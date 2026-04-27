@@ -1,0 +1,12 @@
+{# Footer component #}
+<footer class="ag-footer">
+  <div class="ag-footer__inner">
+    {% if footer_content %}
+      {{ footer_content }}
+    {% endif %}
+
+    <div class="ag-footer__copyright">
+      © {{ "now"|date("Y") }} {{ site_name }}
+    </div>
+  </div>
+</footer>

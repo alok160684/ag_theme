@@ -1,0 +1,15 @@
+/* Banner component styles */
+.ag-banner {
+  padding: 2rem;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+.ag-banner__title {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.ag-banner__text {
+  font-size: 1.1rem;
+}

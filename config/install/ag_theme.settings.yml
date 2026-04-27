@@ -1,4 +1,11 @@
 ag_show_logo: true
+ag_logo_upload: []
 ag_primary_color: '#1f4f82'
 ag_secondary_color: '#f5a623'
 ag_layout_width: '1200px'
+ag_font_family: 'Arial, Helvetica, sans-serif'
+ag_heading_font_family: 'Arial, Helvetica, sans-serif'
+ag_base_font_size: '16px'
+ag_enable_dark_mode: false
+ag_dark_background_color: '#111827'
+ag_dark_text_color: '#f9fafb'

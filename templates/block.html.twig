@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Default block template.
+ */
+#}
+<div{{ attributes.addClass('block') }}>
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+
+  <div class="block__content">
+    {{ content }}
+  </div>
+</div>

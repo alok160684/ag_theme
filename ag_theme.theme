@@ -10,6 +10,11 @@ if (file_exists($ag_theme_preprocess_file)) {
   require_once $ag_theme_preprocess_file;
 }
 
+$ag_theme_settings_file = __DIR__ . '/includes/theme-settings.inc';
+if (file_exists($ag_theme_settings_file)) {
+  require_once $ag_theme_settings_file;
+}
+
 /**
  * Implements hook_preprocess_html().
  */

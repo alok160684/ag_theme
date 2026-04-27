@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Theme functions for AG Theme.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function ag_theme_preprocess_html(&$variables) {
+  $variables['attributes']['class'][] = 'ag-theme';
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function ag_theme_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'ag_theme/global-styling';
+}

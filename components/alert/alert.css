@@ -1,0 +1,22 @@
+/* Alert component styles */
+.ag-alert {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.ag-alert--info {
+  background: #e7f3fe;
+}
+
+.ag-alert--success {
+  background: #e6ffed;
+}
+
+.ag-alert--warning {
+  background: #fff4e5;
+}
+
+.ag-alert--error {
+  background: #fdecea;
+}

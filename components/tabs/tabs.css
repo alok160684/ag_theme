@@ -1,0 +1,18 @@
+/* Tabs component styles */
+.ag-tabs__list {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.ag-tabs__tab {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.ag-tabs__panel {
+  border: 1px solid #ddd;
+  padding: 1rem;
+}

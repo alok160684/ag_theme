@@ -1,0 +1,13 @@
+{# Accordion component #}
+<div class="ag-accordion">
+  {% if items %}
+    {% for item in items %}
+      <div class="ag-accordion__item">
+        <button class="ag-accordion__title">{{ item.title }}</button>
+        <div class="ag-accordion__content">
+          {{ item.content }}
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>

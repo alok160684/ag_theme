@@ -10,6 +10,18 @@
  */
 function ag_theme_preprocess_html(&$variables) {
   $variables['attributes']['class'][] = 'ag-theme';
+
+  $primary_color = theme_get_setting('ag_primary_color') ?: '#1f4f82';
+  $secondary_color = theme_get_setting('ag_secondary_color') ?: '#f5a623';
+  $layout_width = theme_get_setting('ag_layout_width') ?: '1200px';
+
+  $variables['#attached']['html_head'][] = [
+    [
+      '#tag' => 'style',
+      '#value' => ':root { --ag-color-primary: ' . $primary_color . '; --ag-color-secondary: ' . $secondary_color . '; --ag-container-width: ' . $layout_width . '; }',
+    ],
+    'ag_theme_dynamic_css',
+  ];
 }
 
 /**
@@ -17,4 +29,5 @@ function ag_theme_preprocess_html(&$variables) {
  */
 function ag_theme_preprocess_page(&$variables) {
   $variables['#attached']['library'][] = 'ag_theme/global-styling';
+  $variables['#attached']['library'][] = 'ag_theme/components';
 }

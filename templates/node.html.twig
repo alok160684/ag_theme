@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Default node template for AG Theme.
+ */
+#}
+<article{{ attributes.addClass('node') }}>
+  {% if label %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content }}
+  </div>
+</article>

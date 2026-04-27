@@ -10,7 +10,7 @@ function ag_theme_form_system_theme_settings_alter(&$form, FormStateInterface $f
   $form['ag_theme_settings'] = [
     '#type' => 'details',
     '#title' => t('AG Theme Settings'),
-    '#description' => t('Configure branding, colors, typography, and layout defaults for AG Theme.'),
+    '#description' => t('Configure branding, colors, typography, layout, and dark mode settings.'),
     '#open' => TRUE,
   ];
 
@@ -93,5 +93,30 @@ function ag_theme_form_system_theme_settings_alter(&$form, FormStateInterface $f
       '100%' => t('Full width'),
     ],
     '#default_value' => theme_get_setting('ag_layout_width') ?: '1200px',
+  ];
+
+  $form['ag_theme_settings']['dark_mode'] = [
+    '#type' => 'details',
+    '#title' => t('Dark Mode'),
+    '#open' => TRUE,
+  ];
+
+  $form['ag_theme_settings']['dark_mode']['ag_enable_dark_mode'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Enable dark mode'),
+    '#description' => t('Allow dark mode variables and toggle behavior.'),
+    '#default_value' => theme_get_setting('ag_enable_dark_mode'),
+  ];
+
+  $form['ag_theme_settings']['dark_mode']['ag_dark_background_color'] = [
+    '#type' => 'color',
+    '#title' => t('Dark background color'),
+    '#default_value' => theme_get_setting('ag_dark_background_color') ?: '#111827',
+  ];
+
+  $form['ag_theme_settings']['dark_mode']['ag_dark_text_color'] = [
+    '#type' => 'color',
+    '#title' => t('Dark text color'),
+    '#default_value' => theme_get_setting('ag_dark_text_color') ?: '#f9fafb',
   ];
 }

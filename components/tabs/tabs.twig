@@ -1,0 +1,15 @@
+{# Tabs component #}
+<div class="ag-tabs">
+  {% if tabs %}
+    <div class="ag-tabs__list" role="tablist">
+      {% for tab in tabs %}
+        <button class="ag-tabs__tab" type="button">{{ tab.title }}</button>
+      {% endfor %}
+    </div>
+    <div class="ag-tabs__panels">
+      {% for tab in tabs %}
+        <div class="ag-tabs__panel">{{ tab.content }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

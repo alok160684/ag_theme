@@ -18,3 +18,19 @@ components:
       components/card/card.css: {}
       components/grid/grid.css: {}
       components/section/section.css: {}
+      components/button/button.css: {}
+      components/media/media.css: {}
+      components/text/text.css: {}
+      components/container/container.css: {}
+      components/accordion/accordion.css: {}
+      components/tabs/tabs.css: {}
+      components/banner/banner.css: {}
+      components/alert/alert.css: {}
+
+component-scripts:
+  js:
+    js/components/accordion.js: {}
+    js/components/tabs.js: {}
+    js/components/modal.js: {}
+  dependencies:
+    - core/drupal

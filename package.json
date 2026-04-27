@@ -7,7 +7,9 @@
     "build:css": "sass scss/theme.scss css/style.css --style=expanded --source-map && postcss css/style.css --replace",
     "build:css:min": "cross-env NODE_ENV=production sass scss/theme.scss css/style.min.css --style=compressed --no-source-map && cross-env NODE_ENV=production postcss css/style.min.css --replace",
     "watch:css": "sass scss/theme.scss css/style.css --style=expanded --source-map --watch",
-    "postcss": "postcss css/style.css --replace"
+    "postcss": "postcss css/style.css --replace",
+    "lint:css": "stylelint \"scss/**/*.scss\" \"components/**/*.css\" \"css/**/*.css\"",
+    "lint:css:fix": "stylelint \"scss/**/*.scss\" \"components/**/*.css\" \"css/**/*.css\" --fix"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
@@ -15,7 +17,9 @@
     "cssnano": "^7.0.6",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
-    "sass": "^1.69.0"
+    "sass": "^1.69.0",
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard-scss": "^13.1.0"
   },
   "engines": {
     "node": ">=18",

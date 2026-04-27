@@ -1,0 +1,6 @@
+{# Button component #}
+{% if text %}
+  <a href="{{ url|default('#') }}" class="ag-button">
+    {{ text }}
+  </a>
+{% endif %}

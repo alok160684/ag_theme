@@ -1,0 +1,22 @@
+/* Header component styles */
+.ag-header {
+  padding: 1rem 0;
+}
+
+.ag-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ag-header__logo img {
+  max-height: 50px;
+}
+
+.ag-header__nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}

@@ -1,0 +1,20 @@
+{# Hero component #}
+<section class="ag-hero">
+  <div class="ag-hero__inner">
+    {% if title %}
+      <h1 class="ag-hero__title">{{ title }}</h1>
+    {% endif %}
+
+    {% if description %}
+      <div class="ag-hero__description">
+        {{ description }}
+      </div>
+    {% endif %}
+
+    {% if cta %}
+      <div class="ag-hero__cta">
+        {{ cta }}
+      </div>
+    {% endif %}
+  </div>
+</section>

@@ -1,8 +1,8 @@
 name: AG Theme
 type: theme
-description: 'Custom Drupal CMS theme for AG Theme.'
+description: Custom Drupal CMS theme for AG Theme.
 core_version_requirement: ^10 || ^11
-base theme: stable9
+base theme: mercury
 package: Custom
 logo: logo.svg
 

@@ -14,11 +14,23 @@ function ag_theme_preprocess_html(&$variables) {
   $primary_color = theme_get_setting('ag_primary_color') ?: '#1f4f82';
   $secondary_color = theme_get_setting('ag_secondary_color') ?: '#f5a623';
   $layout_width = theme_get_setting('ag_layout_width') ?: '1200px';
+  $font_family = theme_get_setting('ag_font_family') ?: 'Arial, Helvetica, sans-serif';
+  $heading_font_family = theme_get_setting('ag_heading_font_family') ?: 'Arial, Helvetica, sans-serif';
+  $base_font_size = theme_get_setting('ag_base_font_size') ?: '16px';
+
+  $css = ':root {';
+  $css .= '--ag-color-primary: ' . $primary_color . ';';
+  $css .= '--ag-color-secondary: ' . $secondary_color . ';';
+  $css .= '--ag-container-width: ' . $layout_width . ';';
+  $css .= '--ag-font-family: ' . $font_family . ';';
+  $css .= '--ag-heading-font-family: ' . $heading_font_family . ';';
+  $css .= '--ag-font-size-base: ' . $base_font_size . ';';
+  $css .= '}';
 
   $variables['#attached']['html_head'][] = [
     [
       '#tag' => 'style',
-      '#value' => ':root { --ag-color-primary: ' . $primary_color . '; --ag-color-secondary: ' . $secondary_color . '; --ag-container-width: ' . $layout_width . '; }',
+      '#value' => $css,
     ],
     'ag_theme_dynamic_css',
   ];

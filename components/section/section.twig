@@ -1,0 +1,14 @@
+{# Section component #}
+<section class="ag-section">
+  <div class="ag-section__inner">
+    {% if title %}
+      <h2 class="ag-section__title">{{ title }}</h2>
+    {% endif %}
+
+    {% if content %}
+      <div class="ag-section__content">
+        {{ content }}
+      </div>
+    {% endif %}
+  </div>
+</section>

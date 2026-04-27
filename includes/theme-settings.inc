@@ -14,109 +14,25 @@ function ag_theme_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#open' => TRUE,
   ];
 
-  $form['ag_theme_settings']['ag_show_logo'] = [
+  $form['ag_theme_settings']['ag_google_font'] = [
+    '#type' => 'select',
+    '#title' => t('Google Font'),
+    '#description' => t('Optional Google Font loaded from fonts.googleapis.com.'),
+    '#options' => [
+      '' => t('None'),
+      'Inter' => t('Inter'),
+      'Roboto' => t('Roboto'),
+      'Open Sans' => t('Open Sans'),
+      'Lato' => t('Lato'),
+      'Montserrat' => t('Montserrat'),
+      'Poppins' => t('Poppins'),
+    ],
+    '#default_value' => theme_get_setting('ag_google_font') ?: '',
+  ];
+
+  $form['ag_theme_settings']['ag_google_font_apply_to_headings'] = [
     '#type' => 'checkbox',
-    '#title' => t('Show logo'),
-    '#description' => t('Display the configured theme logo in supported templates.'),
-    '#default_value' => theme_get_setting('ag_show_logo'),
-  ];
-
-  $form['ag_theme_settings']['ag_logo_upload'] = [
-    '#type' => 'managed_file',
-    '#title' => t('Custom logo upload'),
-    '#description' => t('Upload a custom SVG, PNG, JPG, or WEBP logo.'),
-    '#upload_location' => 'public://ag-theme/',
-    '#upload_validators' => [
-      'file_validate_extensions' => ['svg png jpg jpeg webp'],
-    ],
-    '#default_value' => theme_get_setting('ag_logo_upload'),
-  ];
-
-  $form['ag_theme_settings']['ag_primary_color'] = [
-    '#type' => 'color',
-    '#title' => t('Primary color'),
-    '#description' => t('Used for buttons, links, and primary brand accents.'),
-    '#default_value' => theme_get_setting('ag_primary_color') ?: '#1f4f82',
-  ];
-
-  $form['ag_theme_settings']['ag_secondary_color'] = [
-    '#type' => 'color',
-    '#title' => t('Secondary color'),
-    '#description' => t('Used for secondary accents and highlights.'),
-    '#default_value' => theme_get_setting('ag_secondary_color') ?: '#f5a623',
-  ];
-
-  $form['ag_theme_settings']['ag_font_family'] = [
-    '#type' => 'select',
-    '#title' => t('Body font family'),
-    '#options' => [
-      'Arial, Helvetica, sans-serif' => t('Arial'),
-      'Georgia, serif' => t('Georgia'),
-      'system-ui, sans-serif' => t('System UI'),
-      'Verdana, Geneva, sans-serif' => t('Verdana'),
-    ],
-    '#default_value' => theme_get_setting('ag_font_family') ?: 'Arial, Helvetica, sans-serif',
-  ];
-
-  $form['ag_theme_settings']['ag_heading_font_family'] = [
-    '#type' => 'select',
-    '#title' => t('Heading font family'),
-    '#options' => [
-      'Arial, Helvetica, sans-serif' => t('Arial'),
-      'Georgia, serif' => t('Georgia'),
-      'system-ui, sans-serif' => t('System UI'),
-      'Verdana, Geneva, sans-serif' => t('Verdana'),
-    ],
-    '#default_value' => theme_get_setting('ag_heading_font_family') ?: 'Arial, Helvetica, sans-serif',
-  ];
-
-  $form['ag_theme_settings']['ag_base_font_size'] = [
-    '#type' => 'select',
-    '#title' => t('Base font size'),
-    '#options' => [
-      '15px' => t('Small - 15px'),
-      '16px' => t('Default - 16px'),
-      '18px' => t('Large - 18px'),
-    ],
-    '#default_value' => theme_get_setting('ag_base_font_size') ?: '16px',
-  ];
-
-  $form['ag_theme_settings']['ag_layout_width'] = [
-    '#type' => 'select',
-    '#title' => t('Layout width'),
-    '#description' => t('Controls the maximum container width.'),
-    '#options' => [
-      '1140px' => t('Narrow - 1140px'),
-      '1200px' => t('Default - 1200px'),
-      '1320px' => t('Wide - 1320px'),
-      '1440px' => t('Extra wide - 1440px'),
-      '100%' => t('Full width'),
-    ],
-    '#default_value' => theme_get_setting('ag_layout_width') ?: '1200px',
-  ];
-
-  $form['ag_theme_settings']['dark_mode'] = [
-    '#type' => 'details',
-    '#title' => t('Dark Mode'),
-    '#open' => TRUE,
-  ];
-
-  $form['ag_theme_settings']['dark_mode']['ag_enable_dark_mode'] = [
-    '#type' => 'checkbox',
-    '#title' => t('Enable dark mode'),
-    '#description' => t('Allow dark mode variables and toggle behavior.'),
-    '#default_value' => theme_get_setting('ag_enable_dark_mode'),
-  ];
-
-  $form['ag_theme_settings']['dark_mode']['ag_dark_background_color'] = [
-    '#type' => 'color',
-    '#title' => t('Dark background color'),
-    '#default_value' => theme_get_setting('ag_dark_background_color') ?: '#111827',
-  ];
-
-  $form['ag_theme_settings']['dark_mode']['ag_dark_text_color'] = [
-    '#type' => 'color',
-    '#title' => t('Dark text color'),
-    '#default_value' => theme_get_setting('ag_dark_text_color') ?: '#f9fafb',
+    '#title' => t('Apply Google Font to headings'),
+    '#default_value' => theme_get_setting('ag_google_font_apply_to_headings'),
   ];
 }

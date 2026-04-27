@@ -1,0 +1,32 @@
+ag_one_column:
+  label: 'AG One column'
+  category: 'AG Theme'
+  template: layouts/one-column/one-column
+  default_region: content
+  regions:
+    content:
+      label: Content
+
+ag_two_column:
+  label: 'AG Two column'
+  category: 'AG Theme'
+  template: layouts/two-column/two-column
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+
+ag_three_column:
+  label: 'AG Three column'
+  category: 'AG Theme'
+  template: layouts/three-column/three-column
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third

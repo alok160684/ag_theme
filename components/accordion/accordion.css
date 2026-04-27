@@ -1,0 +1,15 @@
+/* Accordion component styles */
+.ag-accordion__title {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  border: none;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.ag-accordion__content {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  display: none;
+}

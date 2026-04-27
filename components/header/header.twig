@@ -1,0 +1,20 @@
+{# Header component #}
+<header class="ag-header">
+  <div class="ag-header__inner">
+    {% if logo %}
+      <a class="ag-header__logo" href="/">
+        <img src="{{ logo }}" alt="{{ site_name|default('Home') }}">
+      </a>
+    {% endif %}
+
+    {% if site_name %}
+      <div class="ag-header__site-name">{{ site_name }}</div>
+    {% endif %}
+
+    {% if navigation %}
+      <nav class="ag-header__nav" aria-label="Primary navigation">
+        {{ navigation }}
+      </nav>
+    {% endif %}
+  </div>
+</header>

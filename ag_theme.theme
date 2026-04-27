@@ -30,4 +30,16 @@ function ag_theme_preprocess_html(&$variables) {
 function ag_theme_preprocess_page(&$variables) {
   $variables['#attached']['library'][] = 'ag_theme/global-styling';
   $variables['#attached']['library'][] = 'ag_theme/components';
+  $variables['#attached']['library'][] = 'ag_theme/component-scripts';
+
+  $variables['ag_show_logo'] = theme_get_setting('ag_show_logo');
+  $variables['ag_logo'] = '/' . drupal_get_path('theme', 'ag_theme') . '/logo.svg';
+
+  $uploaded_logo = theme_get_setting('ag_logo_upload');
+  if (!empty($uploaded_logo[0])) {
+    $file = \Drupal\file\Entity\File::load($uploaded_logo[0]);
+    if ($file) {
+      $variables['ag_logo'] = \Drupal::service('file_url_generator')->generateString($file->getFileUri());
+    }
+  }
 }

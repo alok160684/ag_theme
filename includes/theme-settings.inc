@@ -10,7 +10,7 @@ function ag_theme_form_system_theme_settings_alter(&$form, FormStateInterface $f
   $form['ag_theme_settings'] = [
     '#type' => 'details',
     '#title' => t('AG Theme Settings'),
-    '#description' => t('Configure branding, colors, and layout defaults for AG Theme.'),
+    '#description' => t('Configure branding, colors, typography, and layout defaults for AG Theme.'),
     '#open' => TRUE,
   ];
 
@@ -44,6 +44,41 @@ function ag_theme_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#title' => t('Secondary color'),
     '#description' => t('Used for secondary accents and highlights.'),
     '#default_value' => theme_get_setting('ag_secondary_color') ?: '#f5a623',
+  ];
+
+  $form['ag_theme_settings']['ag_font_family'] = [
+    '#type' => 'select',
+    '#title' => t('Body font family'),
+    '#options' => [
+      'Arial, Helvetica, sans-serif' => t('Arial'),
+      'Georgia, serif' => t('Georgia'),
+      'system-ui, sans-serif' => t('System UI'),
+      'Verdana, Geneva, sans-serif' => t('Verdana'),
+    ],
+    '#default_value' => theme_get_setting('ag_font_family') ?: 'Arial, Helvetica, sans-serif',
+  ];
+
+  $form['ag_theme_settings']['ag_heading_font_family'] = [
+    '#type' => 'select',
+    '#title' => t('Heading font family'),
+    '#options' => [
+      'Arial, Helvetica, sans-serif' => t('Arial'),
+      'Georgia, serif' => t('Georgia'),
+      'system-ui, sans-serif' => t('System UI'),
+      'Verdana, Geneva, sans-serif' => t('Verdana'),
+    ],
+    '#default_value' => theme_get_setting('ag_heading_font_family') ?: 'Arial, Helvetica, sans-serif',
+  ];
+
+  $form['ag_theme_settings']['ag_base_font_size'] = [
+    '#type' => 'select',
+    '#title' => t('Base font size'),
+    '#options' => [
+      '15px' => t('Small - 15px'),
+      '16px' => t('Default - 16px'),
+      '18px' => t('Large - 18px'),
+    ],
+    '#default_value' => theme_get_setting('ag_base_font_size') ?: '16px',
   ];
 
   $form['ag_theme_settings']['ag_layout_width'] = [

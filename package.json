@@ -1,0 +1,18 @@
+{
+  "name": "ag-theme",
+  "version": "1.0.0",
+  "description": "Drupal Mercury child theme frontend build tools.",
+  "private": true,
+  "scripts": {
+    "build:css": "sass scss/theme.scss css/style.css --style=expanded --source-map",
+    "build:css:min": "sass scss/theme.scss css/style.min.css --style=compressed --no-source-map",
+    "watch:css": "sass scss/theme.scss css/style.css --style=expanded --source-map --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  }
+}

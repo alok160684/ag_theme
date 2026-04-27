@@ -1,0 +1,8 @@
+title: Banner
+component: components/banner/banner.twig
+stories:
+  default:
+    title: Default banner
+    args:
+      title: Announcement
+      text: This is a banner component.

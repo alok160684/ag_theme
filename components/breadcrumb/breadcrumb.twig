@@ -1,0 +1,10 @@
+{# Breadcrumb component #}
+<nav class="ag-breadcrumb" aria-label="Breadcrumb">
+  {% if items %}
+    <ol>
+      {% for item in items %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ol>
+  {% endif %}
+</nav>

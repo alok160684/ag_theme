@@ -1,0 +1,6 @@
+{# Alert component #}
+<div class="ag-alert ag-alert--{{ type|default('info') }}">
+  {% if message %}
+    {{ message }}
+  {% endif %}
+</div>

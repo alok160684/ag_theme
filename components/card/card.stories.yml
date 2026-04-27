@@ -1,0 +1,9 @@
+title: Card
+component: components/card/card.twig
+stories:
+  default:
+    title: Default card
+    args:
+      title: Card title
+      text: This is a sample card component.
+      link: Read more

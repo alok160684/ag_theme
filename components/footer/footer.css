@@ -1,0 +1,10 @@
+/* Footer component styles */
+.ag-footer {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.ag-footer__copyright {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}

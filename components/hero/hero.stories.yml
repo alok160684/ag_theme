@@ -1,0 +1,9 @@
+title: Hero
+component: components/hero/hero.twig
+stories:
+  default:
+    title: Default hero
+    args:
+      title: Welcome to AG Theme
+      description: A Mercury child theme hero component.
+      cta: Learn more

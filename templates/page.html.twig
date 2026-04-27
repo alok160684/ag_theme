@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Default page template for AG Theme.
+ */
+#}
+<div class="layout-container">
+  <header class="site-header" role="banner">
+    <div class="ag-container">
+      {{ page.header }}
+      {{ page.primary_menu }}
+    </div>
+  </header>
+
+  {% if page.breadcrumb %}
+    <div class="site-breadcrumb">
+      <div class="ag-container">
+        {{ page.breadcrumb }}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if page.highlighted or page.help %}
+    <div class="site-messages">
+      <div class="ag-container">
+        {{ page.highlighted }}
+        {{ page.help }}
+      </div>
+    </div>
+  {% endif %}
+
+  <main class="site-main" role="main">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="ag-container layout-content">
+      {% if page.sidebar_first %}
+        <aside class="layout-sidebar layout-sidebar-first" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
+
+      <section class="layout-primary">
+        {{ page.content }}
+      </section>
+
+      {% if page.sidebar_second %}
+        <aside class="layout-sidebar layout-sidebar-second" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      {% endif %}
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="ag-container">
+      {{ page.footer }}
+    </div>
+  </footer>
+</div>

@@ -17,6 +17,27 @@ function ag_theme_preprocess_html(&$variables) {
   $font_family = theme_get_setting('ag_font_family') ?: 'Arial, Helvetica, sans-serif';
   $heading_font_family = theme_get_setting('ag_heading_font_family') ?: 'Arial, Helvetica, sans-serif';
   $base_font_size = theme_get_setting('ag_base_font_size') ?: '16px';
+  $google_font = theme_get_setting('ag_google_font') ?: '';
+  $google_font_headings = theme_get_setting('ag_google_font_apply_to_headings');
+
+  if (!empty($google_font)) {
+    $encoded_font = str_replace(' ', '+', $google_font);
+    $variables['#attached']['html_head'][] = [
+      [
+        '#tag' => 'link',
+        '#attributes' => [
+          'rel' => 'stylesheet',
+          'href' => 'https://fonts.googleapis.com/css2?family=' . $encoded_font . ':wght@300;400;600;700&display=swap',
+        ],
+      ],
+      'ag_theme_google_font',
+    ];
+
+    $font_family = "'" . $google_font . "', sans-serif";
+    if ($google_font_headings) {
+      $heading_font_family = "'" . $google_font . "', sans-serif";
+    }
+  }
 
   $css = ':root {';
   $css .= '--ag-color-primary: ' . $primary_color . ';';

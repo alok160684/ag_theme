@@ -1,0 +1,16 @@
+ag_theme.settings:
+  type: theme_settings
+  label: 'AG Theme settings'
+  mapping:
+    ag_show_logo:
+      type: boolean
+      label: 'Show logo'
+    ag_primary_color:
+      type: string
+      label: 'Primary color'
+    ag_secondary_color:
+      type: string
+      label: 'Secondary color'
+    ag_layout_width:
+      type: string
+      label: 'Layout width'

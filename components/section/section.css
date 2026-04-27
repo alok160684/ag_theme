@@ -1,0 +1,14 @@
+/* Section component styles */
+.ag-section {
+  padding: 3rem 0;
+}
+
+.ag-section__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.ag-section__title {
+  margin-bottom: 1rem;
+}

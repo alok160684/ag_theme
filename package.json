@@ -5,12 +5,14 @@
   "private": true,
   "scripts": {
     "build:css": "sass scss/theme.scss css/style.css --style=expanded --source-map && postcss css/style.css --replace",
-    "build:css:min": "sass scss/theme.scss css/style.min.css --style=compressed --no-source-map && postcss css/style.min.css --replace",
+    "build:css:min": "cross-env NODE_ENV=production sass scss/theme.scss css/style.min.css --style=compressed --no-source-map && cross-env NODE_ENV=production postcss css/style.min.css --replace",
     "watch:css": "sass scss/theme.scss css/style.css --style=expanded --source-map --watch",
     "postcss": "postcss css/style.css --replace"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.0.6",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "sass": "^1.69.0"
